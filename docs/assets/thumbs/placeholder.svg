@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" width="1280" height="720">
+  <rect width="1280" height="720" fill="#cfd6d3"/>
+  <g fill="none" stroke="#a9b3af" stroke-width="2">
+    <path d="M0 720 L1280 0"/>
+    <path d="M0 0 L1280 720"/>
+  </g>
+  <rect x="440" y="310" width="400" height="100" rx="12" fill="#cfd6d3"/>
+  <text x="640" y="372" text-anchor="middle" font-family="ui-monospace, Menlo, monospace" font-size="40" fill="#5e6965">1280 × 720</text>
+</svg>

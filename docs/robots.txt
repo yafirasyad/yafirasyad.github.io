@@ -1,0 +1,4 @@
+User-agent: *
+Disallow: /writing/post-template/
+
+Sitemap: https://[yourdomain].com/sitemap.xml

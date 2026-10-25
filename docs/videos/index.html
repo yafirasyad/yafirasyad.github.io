@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <!-- CSP juga di sini supaya mirror GitHub Pages (yang tidak membaca _headers) tetap terlindungi.
+       Header di _headers tetap yang utama di Cloudflare; frame-ancestors hanya berlaku lewat header. -->
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; font-src 'self'; img-src 'self' data:; base-uri 'none'; form-action 'none'; upgrade-insecure-requests">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <title>Videos · Yafi Rasyad</title>
+  <meta name="description" content="Videos and talks by Yafi Rasyad.">
+  <link rel="canonical" href="https://[yourdomain].com/videos/">
+  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="../assets/favicon-32.png" sizes="32x32" type="image/png">
+  <link rel="apple-touch-icon" href="../assets/apple-touch-icon.png">
+  <meta name="theme-color" content="#f2f4f3" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#121514" media="(prefers-color-scheme: dark)">
+  <!-- Gambar preview saat link dibagikan (LinkedIn, X, WhatsApp). Harus URL absolut. -->
+  <meta property="og:image" content="https://[yourdomain].com/assets/og.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="stylesheet" href="../assets/style.css">
+  <script src="../assets/main.js"></script>
+</head>
+<body>
+<!--
+  SEMUA VIDEO & TALK
+  - Dikelompokkan per topik (seperti LiveOverflow), bukan per tanggal, supaya orang
+    langsung ke topik yang mereka cari. Talk masuk grup sendiri.
+  - Hanya konten teknis. Channel vlog/personal tetap di footer homepage.
+  - Link biasa ke YouTube, bukan embed <iframe> (embed menambah tracking
+    pihak ketiga dan harus melonggarkan CSP).
+  - Thumbnail: simpan di assets/thumbs/ (lihat README bagian Thumbnail).
+-->
+
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="site-header">
+  <div class="wrap row">
+    <a class="brand" href="../">Yafi Rasyad</a>
+    <nav class="site-nav" aria-label="Main">
+      <a href="../writing/">Writing</a>
+      <a href="../projects/">Projects</a>
+      <a href="../videos/" aria-current="page">Videos</a>
+      <a href="../#work">Work</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main" class="wrap">
+  <div class="page-head">
+    <a class="back" href="../">← Home</a>
+    <h1>Videos &amp; talks <span class="chip tech">tech</span></h1>
+    <p>Security concepts explained in English, from web bugs to Active Directory. From <a href="https://www.youtube.com/@[tech-channel]">Yafi Rasyad</a> on YouTube. For travel and everyday life, see <a href="https://www.youtube.com/@[personal-channel]">The Yapeng</a> <span class="chip life">non-tech</span>.</p>
+  </div>
+
+  <div class="groups">
+
+    <section class="group" aria-labelledby="t-1">
+      <h2 class="group-title" id="t-1"><span>[Topic, e.g. Web security]</span><span class="count">[2] videos</span></h2>
+      <ul class="tiles">
+        <li>
+          <a class="tile" href="https://www.youtube.com/watch?v=[id]">
+            <div class="thumb">
+              <img src="../assets/thumbs/placeholder.svg" alt="[Video thumbnail: short description]" width="1280" height="720">
+              <span class="badge">[12:34]</span>
+            </div>
+            <div class="body">
+              <span class="title">[Video title]</span>
+              <span class="desc">[What the viewer will be able to do after watching.]</span>
+              <span class="meta">Yafi Rasyad · [YYYY-MM]</span>
+            </div>
+          </a>
+        </li>
+        <li>
+          <a class="tile" href="https://www.youtube.com/watch?v=[id]">
+            <div class="thumb">
+              <img src="../assets/thumbs/placeholder.svg" alt="[Video thumbnail: short description]" width="1280" height="720" loading="lazy">
+              <span class="badge">[08:02]</span>
+            </div>
+            <div class="body">
+              <span class="title">[Video title]</span>
+              <span class="desc">[What the viewer will be able to do after watching.]</span>
+              <span class="meta">Yafi Rasyad · [YYYY-MM]</span>
+            </div>
+          </a>
+        </li>
+      </ul>
+    </section>
+
+    <section class="group" aria-labelledby="t-2">
+      <h2 class="group-title" id="t-2"><span>[Topic, e.g. CTF &amp; HackTheBox]</span><span class="count">[1] video</span></h2>
+      <ul class="tiles">
+        <li>
+          <a class="tile" href="https://www.youtube.com/watch?v=[id]">
+            <div class="thumb">
+              <img src="../assets/thumbs/placeholder.svg" alt="[Video thumbnail: short description]" width="1280" height="720" loading="lazy">
+              <span class="badge">[21:47]</span>
+            </div>
+            <div class="body">
+              <span class="title">[Video title]</span>
+              <span class="desc">[What the viewer will be able to do after watching.]</span>
+              <span class="meta">Yafi Rasyad · [YYYY-MM]</span>
+            </div>
+          </a>
+        </li>
+      </ul>
+    </section>
+
+    <section class="group" aria-labelledby="t-talks">
+      <h2 class="group-title" id="t-talks"><span>Talks &amp; teaching</span><span class="count">1</span></h2>
+      <ul class="tiles">
+        <li>
+          <a class="tile" href="https://www.youtube.com/live/qsUsNvlckz4">
+            <div class="thumb">
+              <img src="../assets/thumbs/placeholder.svg" alt="[Still from the Camp404 web development tutorial]" width="1280" height="720" loading="lazy">
+              <span class="badge">series</span>
+            </div>
+            <div class="body">
+              <span class="title">Web development tutorials: HTML, CSS, PHP and SQL</span>
+              <span class="desc">A tutorial series taught over Zoom and YouTube to 1,514 participants.</span>
+              <span class="meta">Camp404 · 2022</span>
+            </div>
+          </a>
+        </li>
+      </ul>
+    </section>
+
+  </div>
+</main>
+
+<footer class="wrap site-footer">
+  <ul class="footer-social" aria-label="Elsewhere">
+    <li><a href="https://github.com/yafirasyad">GitHub</a></li>
+    <li><a href="https://www.linkedin.com/in/yafirasyad">LinkedIn</a></li>
+    <li><a href="https://medium.com/@[username]">Medium</a></li>
+    <li><a href="https://www.youtube.com/@[tech-channel]">YouTube</a></li>
+    <li><a href="https://www.youtube.com/@[personal-channel]">The Yapeng</a></li>
+    <li><a href="../#contact">Email</a></li>
+  </ul>
+  <div class="footer-meta">
+    <span>© 2026 Yafi Rasyad · <a href="https://yafirasyad.github.io/videos/">Mirror</a></span>
+    <button type="button" class="theme-toggle" id="theme" aria-label="Change theme">theme: system</button>
+  </div>
+</footer>
+</body>
+</html>

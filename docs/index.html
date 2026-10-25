@@ -1,0 +1,370 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <!-- CSP juga di sini supaya mirror GitHub Pages (yang tidak membaca _headers) tetap terlindungi.
+       Header di _headers tetap yang utama di Cloudflare; frame-ancestors hanya berlaku lewat header. -->
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; font-src 'self'; img-src 'self' data:; base-uri 'none'; form-action 'none'; upgrade-insecure-requests">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <title>Yafi Rasyad</title>
+  <meta name="description" content="Yafi Rasyad, offensive security consultant at ITSEC Asia. Web, API and infrastructure security testing for companies in Indonesia.">
+  <link rel="canonical" href="https://[yourdomain].com/">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Yafi Rasyad">
+  <meta property="og:description" content="Offensive security consultant at ITSEC Asia. Web, API and infrastructure security testing.">
+  <meta property="og:url" content="https://[yourdomain].com/">
+
+  <link rel="preload" href="assets/fonts/instrument-sans-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="assets/favicon-32.png" sizes="32x32" type="image/png">
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+  <meta name="theme-color" content="#f2f4f3" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#121514" media="(prefers-color-scheme: dark)">
+  <!-- Gambar preview saat link dibagikan (LinkedIn, X, WhatsApp). Harus URL absolut. -->
+  <meta property="og:image" content="https://[yourdomain].com/assets/og.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="stylesheet" href="assets/style.css">
+  <script src="assets/main.js"></script>
+</head>
+<body>
+<!--
+  CARA ISI
+  - Teks dalam [kurung siku] = belum ada datanya. Isi, atau hapus barisnya.
+  - Entri yang diawali "Example:" = contoh bentuk, bukan data nyata. Ganti atau hapus sebelum publish.
+  - Section yang belum punya isi: hapus <section>-nya DAN item menunya.
+  - Satu entri = satu <li>. Entri terbaik/terbaru paling atas.
+
+  THUMBNAIL
+  - Simpan gambar di assets/thumbs/, lalu ganti src="assets/thumbs/placeholder.svg".
+  - 1280x720 (16:9), .jpg/.webp, di bawah ~150 KB. Strip EXIF dulu. Isi alt="".
+
+  HALAMAN
+  - /            ← halaman ini: ringkasan terbaik
+  - /writing/    ← semua tulisan, per tahun        - /writing/<slug>/ ← satu tulisan
+  - /projects/   ← semua proyek                    - /videos/         ← semua video
+  - /404.html
+
+  URUTAN (dari yang paling bikin orang terkesan)
+  1. Intro + baris bukti   2. Writing & research   3. Projects   4. Videos & talks
+  5. Work                  6. Certifications & awards   -  Off the clock   7. Get in touch
+-->
+
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="site-header">
+  <div class="wrap row">
+    <a class="brand" href="./" aria-current="page">Yafi Rasyad</a>
+    <nav class="site-nav" aria-label="Main">
+      <a href="writing/">Writing</a>
+      <a href="projects/">Projects</a>
+      <a href="videos/">Videos</a>
+      <a href="#work">Work</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main" class="wrap">
+
+  <!-- 1. INTRO -->
+  <section class="intro" aria-label="Introduction">
+    <div class="intro-top">
+      <!-- AVATAR (opsional): foto kecil dan santai, 1:1, minimal 160x160px.
+           Simpan sebagai assets/avatar.jpg (strip EXIF dulu), lalu ganti src.
+           Tidak mau pakai foto? Hapus <img> ini. -->
+      <img class="avatar" src="assets/avatar.jpg" alt="Yafi Rasyad" width="80" height="80">
+      <p class="lede">I'm Yafi, an offensive security consultant at ITSEC Asia. <span class="quiet">I test web apps, APIs and internal networks.</span></p>
+    </div>
+    <p>I also build software, front end to back end: Go services, Laravel and Next.js web apps, and an IoT monitoring system for a reservoir. Some of it is in <a href="projects/">projects</a>.</p>
+    <!-- BARIS BUKTI (sementara disembunyikan): tambahkan lagi kalau sudah ada fakta yang benar-benar kuat,
+         misalnya CVE, bug bounty, hasil CTF internasional, atau jumlah engagement. Maksimal 3.
+    <ul class="facts" aria-label="Highlights">
+      <li>[fact one]</li>
+      <li>[fact two]</li>
+      <li>[fact three]</li>
+    </ul>
+    -->
+    <ul class="links">
+      <li><a href="https://github.com/yafirasyad">GitHub</a></li>
+      <li><a href="https://www.linkedin.com/in/yafirasyad">LinkedIn</a></li>
+      <li><a href="https://medium.com/@[username]">Medium</a></li>
+      <li>
+        <!-- YouTube: dua channel. Tech = konten profesional, non-tech = personal. -->
+        <details class="dropdown">
+          <summary>YouTube</summary>
+          <ul class="dropdown-panel">
+            <li><a href="https://www.youtube.com/@[tech-channel]"><span class="dd-title">Yafi Rasyad <span class="chip tech">tech</span></span><span class="dd-sub">Security and engineering, explained in English.</span></a></li>
+            <li><a href="https://www.youtube.com/@[personal-channel]"><span class="dd-title">The Yapeng <span class="chip life">non-tech</span></span><span class="dd-sub">Travel, vlogs and everyday life.</span></a></li>
+          </ul>
+        </details>
+      </li>
+      <li><a href="assets/resume.pdf">Résumé</a></li>
+      <li><a href="#contact">Email</a></li>
+    </ul>
+  </section>
+
+  <!-- 2. WRITING & RESEARCH
+       Tulisan di situs sendiri (writing/<slug>/) + cross-post ke Medium ("also on Medium").
+       Paper tanpa halaman sendiri: link ke URL aslinya, tambahkan " ↗". -->
+  <section class="section" aria-labelledby="writing">
+    <div class="section-head">
+      <h2 id="writing">Writing &amp; research</h2>
+      <a class="see-all" href="writing/">All posts →</a>
+    </div>
+    <ul class="posts">
+      <li>
+        <!-- Contoh writeup. Ganti dengan writeup pertamamu (HTB, CTF, atau temuan yang sudah disanitasi). -->
+        <a class="post" href="writing/post-template/">
+          <div class="thumb"><img src="assets/thumbs/placeholder.svg" alt="[Short description of the image]" width="1280" height="800"></div>
+          <div class="body">
+            <span class="title">Example: From a low-privileged domain user to Domain Admin through ADCS</span>
+            <span class="desc">[One sentence: what the reader learns.]</span>
+            <span class="meta">[YYYY-MM] · active-directory · also on Medium</span>
+          </div>
+        </a>
+      </li>
+      <li>
+        <a class="post no-thumb" href="https://etd.repository.ugm.ac.id/penelitian/detail/225634">
+          <div class="body">
+            <span class="title">Development of Bash Scripting-Based Forensic Tools for Investigating XSS and DDoS Attack Logs on Websites</span>
+            <span class="desc">Undergraduate thesis, Universitas Gadjah Mada.</span>
+            <span class="meta">2023-07 · thesis · forensics ↗</span>
+          </div>
+        </a>
+      </li>
+      <li>
+        <a class="post no-thumb" href="https://ejournal.uin-suka.ac.id/saintek/cybersecurity/article/view/3935">
+          <div class="body">
+            <span class="title">Analysis of Encrypted Network Traffic from a Secure Instant Messaging Application: A Case Study on Synology Chat</span>
+            <span class="desc">Jurnal Cybersecurity dan Forensik Digital, Vol. 5 No. 2.</span>
+            <span class="meta">2022-11 · paper · forensics ↗</span>
+          </div>
+        </a>
+      </li>
+    </ul>
+  </section>
+
+  <!-- 3. PROJECTS -->
+  <section class="section" aria-labelledby="projects">
+    <div class="section-head">
+      <h2 id="projects">Projects</h2>
+      <a class="see-all" href="projects/">All projects →</a>
+    </div>
+    <ul class="tiles">
+      <li>
+        <a class="tile" href="https://github.com/yafirasyad/forenlog">
+          <div class="thumb"><img src="assets/thumbs/placeholder.svg" alt="[Screenshot of Forenlog output]" width="1280" height="720" loading="lazy"></div>
+          <div class="body">
+            <span class="title">Forenlog</span>
+            <span class="desc">Bash forensic tool for finding XSS and DDoS traces in web server logs, from my thesis.</span>
+            <span class="meta">Bash · 2023</span>
+          </div>
+        </a>
+      </li>
+      <li>
+        <a class="tile" href="https://drive.google.com/file/d/19Jqls-mtkTZf9IR2tWAJabCI-bzBYguL/view">
+          <div class="thumb"><img src="assets/thumbs/placeholder.svg" alt="[Dashboard of the reservoir monitoring system]" width="1280" height="720" loading="lazy"></div>
+          <div class="body">
+            <span class="title">Waduk Bendo IoT monitoring</span>
+            <span class="desc">Real-time monitoring software for the Bendo reservoir, built for Yiqun Technology (Taiwan) and PLN.</span>
+            <span class="meta">PHP, ThingSpeak API · 2022</span>
+          </div>
+        </a>
+      </li>
+    </ul>
+  </section>
+
+  <!-- 4. VIDEOS & TALKS (tech saja). Kurasi 2-6 video terbaik. -->
+  <section class="section" aria-labelledby="videos">
+    <div class="section-head">
+      <h2 id="videos">Videos &amp; talks <span class="chip tech">tech</span></h2>
+      <a class="see-all" href="videos/">All videos →</a>
+    </div>
+    <ul class="tiles">
+      <li>
+        <a class="tile" href="https://www.youtube.com/watch?v=[id]">
+          <div class="thumb">
+            <img src="assets/thumbs/placeholder.svg" alt="[Video thumbnail: short description]" width="1280" height="720" loading="lazy">
+            <span class="badge">[mm:ss]</span>
+          </div>
+          <div class="body">
+            <span class="title">[Video title]</span>
+            <span class="desc">[What the viewer will be able to do after watching.]</span>
+            <span class="meta">Yafi Rasyad · [YYYY-MM]</span>
+          </div>
+        </a>
+      </li>
+      <li>
+        <!-- Tutorial Camp404 (sumber: CV). Ganti link dengan playlist/video aslinya. -->
+        <a class="tile" href="https://www.youtube.com/live/qsUsNvlckz4">
+          <div class="thumb">
+            <img src="assets/thumbs/placeholder.svg" alt="[Still from the Camp404 web development tutorial]" width="1280" height="720" loading="lazy">
+            <span class="badge">series</span>
+          </div>
+          <div class="body">
+            <span class="title">Web development tutorials: HTML, CSS, PHP and SQL</span>
+            <span class="desc">A tutorial series taught over Zoom and YouTube to 1,514 participants.</span>
+            <span class="meta">Camp404 · 2022</span>
+          </div>
+        </a>
+      </li>
+    </ul>
+  </section>
+
+  <!-- 5. WORK (pekerjaan dan intern saja, terbaru di atas)
+       Bullet = hasil + angka (formula XYZ). Angka dalam [kurung] = contoh: ganti dengan angka asli
+       yang bisa kamu pertanggungjawabkan di interview, atau hapus klausanya. Samakan dengan CV dan LinkedIn. -->
+  <section class="section" aria-labelledby="work">
+    <div class="section-head">
+      <h2 id="work">Work</h2>
+      <a class="see-all" href="assets/resume.pdf">Résumé (PDF) →</a>
+    </div>
+    <ul class="jobs">
+      <li class="job">
+        <div class="dates">2023 – now</div>
+        <div class="what">
+          <h3>ITSEC Asia</h3>
+          <p class="role">Jr. Offensive Security Consultant, previously intern</p>
+          <ul>
+            <li>Led web, API and infrastructure pentests for [12] clients in banking, telecom, insurance and education, finding [45] high or critical issues.</li>
+            <li>Found [an authorization flaw in a banking API that exposed other customers' account data] and verified the fix on retest.</li>
+            <li>Wrote [30+] English technical reports; [90%] of critical findings were fixed before retest.</li>
+          </ul>
+        </div>
+      </li>
+      <li class="job">
+        <div class="dates">2022 – 2023</div>
+        <div class="what">
+          <h3>Synapsis.id</h3>
+          <p class="role">Backend Developer Intern</p>
+          <ul>
+            <li>Built Go and MySQL services, containerized with Docker, for a coal mining client's production system.</li>
+          </ul>
+        </div>
+      </li>
+      <li class="job">
+        <div class="dates">2022</div>
+        <div class="what">
+          <h3>Camp404</h3>
+          <p class="role">Fullstack Web Developer Intern</p>
+          <ul>
+            <li>Cut a Laravel app's search load time by [70%] with paginated queries, and taught web basics to 1,514 learners.</li>
+          </ul>
+        </div>
+      </li>
+      <li class="job">
+        <div class="dates">2021</div>
+        <div class="what">
+          <h3>Widya Security</h3>
+          <p class="role">Cybersecurity Engineer Intern</p>
+          <ul>
+            <li>Tested web apps with OWASP and ISSAF; my research on encrypted chat forensics became a journal paper.</li>
+          </ul>
+        </div>
+      </li>
+    </ul>
+  </section>
+
+  <!-- 5b. EDUCATION & COMMUNITY (terbaru di atas, urut tahun selesai) -->
+  <section class="section" aria-labelledby="education">
+    <div class="section-head">
+      <h2 id="education">Education &amp; community</h2>
+    </div>
+    <ul class="jobs">
+      <li class="job">
+        <div class="dates">2019 – 2023</div>
+        <div class="what">
+          <h3>Universitas Gadjah Mada</h3>
+          <p class="role">B.Eng. Information Engineering · teaching assistant for Computer Security and IT Auditing</p>
+        </div>
+      </li>
+      <li class="job">
+        <div class="dates">2020 – 2021</div>
+        <div class="what">
+          <h3>Technocorner</h3>
+          <p class="role">Software Developer Lead · tech event at Universitas Gadjah Mada</p>
+        </div>
+      </li>
+    </ul>
+  </section>
+
+  <!-- 6. AWARDS (+ sertifikasi nanti)
+       Setelah lulus OSCP (atau sertifikasi lain), tambahkan barisnya di sini dan ganti judul
+       section jadi "Certifications &amp; awards". Contoh:
+       <li><span class="when">2026</span><span>OSCP <span class="note">· OffSec</span></span></li> -->
+  <section class="section" aria-labelledby="certs">
+    <div class="section-head">
+      <h2 id="certs">Awards</h2>
+    </div>
+    <ul class="rows">
+      <li><span class="when">2021</span><span>1st place, KMTETI CTF</span></li>
+      <li><span class="when">2020</span><span>Finalist, ELCCO Technology Creation Contest</span></li>
+      <li><span class="when">2017</span><span>3rd place, Science and Technology Award <span class="note">· Mayor of Yogyakarta</span></span></li>
+      <li><span class="when">2017</span><span>1st place, Science Expo Padmanaba</span></li>
+    </ul>
+  </section>
+
+  <!-- OFF THE CLOCK (non-tech). Kecil, di bawah, tidak masuk menu.
+       Pilih 3 video terbaik secara visual. Hindari "subscribe" atau angka subscriber.
+       Sebelum menautkan: tonton ulang channel-nya dengan mata recruiter. -->
+  <section class="section offclock" aria-labelledby="offclock">
+    <div class="section-head">
+      <h2 id="offclock">Off the clock <span class="chip life">non-tech</span></h2>
+      <a class="see-all" href="https://www.youtube.com/@[personal-channel]">Watch on YouTube →</a>
+    </div>
+    <p class="offclock-lede">Friends call me Yapeng, so that's what I named <a href="https://www.youtube.com/@[personal-channel]">The Yapeng</a>, where I post travel and everyday-life vlogs. I also play piano and guitar, run, and lift. I speak Indonesian, Javanese and English.</p>
+    <ul class="reel">
+      <li>
+        <a class="reel-item" href="https://www.youtube.com/watch?v=[id]">
+          <div class="thumb"><img src="assets/thumbs/placeholder.svg" alt="[Still from the video]" width="1280" height="720" loading="lazy"></div>
+          <span class="reel-caption">[Place or title]</span>
+        </a>
+      </li>
+      <li>
+        <a class="reel-item" href="https://www.youtube.com/watch?v=[id]">
+          <div class="thumb"><img src="assets/thumbs/placeholder.svg" alt="[Still from the video]" width="1280" height="720" loading="lazy"></div>
+          <span class="reel-caption">[Place or title]</span>
+        </a>
+      </li>
+      <li>
+        <a class="reel-item" href="https://www.youtube.com/watch?v=[id]">
+          <div class="thumb"><img src="assets/thumbs/placeholder.svg" alt="[Still from the video]" width="1280" height="720" loading="lazy"></div>
+          <span class="reel-caption">[Place or title]</span>
+        </a>
+      </li>
+    </ul>
+  </section>
+
+  <!-- 7. CONNECT -->
+  <section class="section connect" aria-labelledby="contact-h" id="contact">
+    <div class="section-head">
+      <h2 id="contact-h">Get in touch</h2>
+    </div>
+    <p>For research, writing or roles in application security, email works best.</p>
+    <div class="contact-line">
+      <a href="mailto:yafirasyadd@gmail.com"><code id="email">yafirasyadd@gmail.com</code></a>
+      <button type="button" class="btn" id="copy-email">Copy</button>
+    </div>
+  </section>
+
+</main>
+
+<footer class="wrap site-footer">
+  <ul class="footer-social" aria-label="Elsewhere">
+    <li><a href="https://github.com/yafirasyad">GitHub</a></li>
+    <li><a href="https://www.linkedin.com/in/yafirasyad">LinkedIn</a></li>
+    <li><a href="https://medium.com/@[username]">Medium</a></li>
+    <li><a href="https://www.youtube.com/@[tech-channel]">YouTube</a></li>
+    <li><a href="https://www.youtube.com/@[personal-channel]">The Yapeng</a></li>
+    <li><a href="#contact">Email</a></li>
+  </ul>
+  <div class="footer-meta">
+    <span>© 2026 Yafi Rasyad · <a href="https://yafirasyad.github.io/">Mirror</a></span>
+    <button type="button" class="theme-toggle" id="theme" aria-label="Change theme">theme: system</button>
+  </div>
+</footer>
+</body>
+</html>

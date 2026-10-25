@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <!-- CSP juga di sini supaya mirror GitHub Pages (yang tidak membaca _headers) tetap terlindungi.
+       Header di _headers tetap yang utama di Cloudflare; frame-ancestors hanya berlaku lewat header. -->
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; font-src 'self'; img-src 'self' data:; base-uri 'none'; form-action 'none'; upgrade-insecure-requests">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <title>Not found · Yafi Rasyad</title>
+  <meta name="robots" content="noindex">
+  <!--
+    Path absolut (/assets/...) dipakai di sini, bukan relatif, karena halaman ini
+    bisa muncul di URL sedalam apa pun (misalnya /writing/a/b/c).
+    Halaman ini sengaja tidak menampilkan URL yang diminta: menampilkan input dari URL
+    ke halaman adalah sumber klasik XSS.
+  -->
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="/assets/favicon-32.png" sizes="32x32" type="image/png">
+  <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+  <meta name="theme-color" content="#f2f4f3" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#121514" media="(prefers-color-scheme: dark)">
+  <link rel="stylesheet" href="/assets/style.css">
+  <script src="/assets/main.js"></script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="site-header">
+  <div class="wrap row">
+    <a class="brand" href="/">Yafi Rasyad</a>
+    <nav class="site-nav" aria-label="Main">
+      <a href="/writing/">Writing</a>
+      <a href="/projects/">Projects</a>
+      <a href="/videos/">Videos</a>
+      <a href="/#work">Work</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main" class="wrap">
+  <section class="notfound" aria-labelledby="nf">
+    <p class="code">HTTP 404</p>
+    <h1 id="nf">This page doesn't exist.</h1>
+    <p>It may have moved, or the link has a typo. Try one of these instead:</p>
+    <ul class="links">
+      <li><a href="/">Home</a></li>
+      <li><a href="/writing/">Writing</a></li>
+      <li><a href="/projects/">Projects</a></li>
+      <li><a href="/videos/">Videos</a></li>
+    </ul>
+  </section>
+</main>
+
+<footer class="wrap site-footer">
+  <ul class="footer-social" aria-label="Elsewhere">
+    <li><a href="https://github.com/yafirasyad">GitHub</a></li>
+    <li><a href="https://www.linkedin.com/in/yafirasyad">LinkedIn</a></li>
+    <li><a href="https://medium.com/@[username]">Medium</a></li>
+    <li><a href="https://www.youtube.com/@[tech-channel]">YouTube</a></li>
+    <li><a href="https://www.youtube.com/@[personal-channel]">The Yapeng</a></li>
+    <li><a href="/#contact">Email</a></li>
+  </ul>
+  <div class="footer-meta">
+    <span>© 2026 Yafi Rasyad · <a href="https://yafirasyad.github.io/">Mirror</a></span>
+    <button type="button" class="theme-toggle" id="theme" aria-label="Change theme">theme: system</button>
+  </div>
+</footer>
+</body>
+</html>
