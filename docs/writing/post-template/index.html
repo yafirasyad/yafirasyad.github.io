@@ -3,26 +3,22 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <!-- CSP juga di sini supaya mirror GitHub Pages (yang tidak membaca _headers) tetap terlindungi.
-       Header di _headers tetap yang utama di Cloudflare; frame-ancestors hanya berlaku lewat header. -->
-  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; font-src 'self'; img-src 'self' data:; base-uri 'none'; form-action 'none'; upgrade-insecure-requests">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; font-src 'self'; img-src 'self'; base-uri 'none'; form-action 'none'; require-trusted-types-for 'script'; trusted-types 'none'; upgrade-insecure-requests">
   <meta name="referrer" content="strict-origin-when-cross-origin">
   <title>[Post title] · Yafi Rasyad</title>
   <meta name="description" content="[One sentence summary of the post. This shows up in Google and link previews.]">
-  <link rel="canonical" href="https://[yourdomain].com/writing/[slug]/">
+  <link rel="canonical" href="https://yafirasyad.github.io/writing/[slug]/">
   <meta property="og:type" content="article">
   <meta property="og:title" content="[Post title]">
   <meta property="og:description" content="[One sentence summary.]">
-  <meta property="og:url" content="https://[yourdomain].com/writing/[slug]/">
-  <!-- Hapus baris noindex di bawah setelah tulisan ini bukan template lagi. -->
+  <meta property="og:url" content="https://yafirasyad.github.io/writing/[slug]/">
   <meta name="robots" content="noindex">
   <link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml">
   <link rel="icon" href="../../assets/favicon-32.png" sizes="32x32" type="image/png">
   <link rel="apple-touch-icon" href="../../assets/apple-touch-icon.png">
   <meta name="theme-color" content="#f2f4f3" media="(prefers-color-scheme: light)">
   <meta name="theme-color" content="#121514" media="(prefers-color-scheme: dark)">
-  <!-- Gambar preview saat link dibagikan (LinkedIn, X, WhatsApp). Harus URL absolut. -->
-  <meta property="og:image" content="https://[yourdomain].com/assets/og.png">
+  <meta property="og:image" content="https://yafirasyad.github.io/assets/og.png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta name="twitter:card" content="summary_large_image">
@@ -30,25 +26,6 @@
   <script src="../../assets/main.js"></script>
 </head>
 <body>
-<!--
-  TEMPLATE TULISAN
-  1. Copy folder ini: writing/post-template/ → writing/<slug>/
-     slug = huruf kecil + tanda hubung, misalnya "adcs-esc8-to-domain-admin".
-  2. Ganti isi, hapus baris <meta name="robots" content="noindex">.
-  3. Tambahkan entrinya di writing/index.html dan (kalau termasuk terbaik) di homepage.
-  4. Publish (git push). Lalu cross-post ke Medium lewat "Import a story" dengan URL halaman ini,
-     supaya Medium memasang canonical ke situsmu. Tempel URL Medium-nya di dua tempat di file ini.
-
-  STRUKTUR WRITEUP SECURITY (hapus bagian yang tidak relevan)
-  Summary → Background → The bug → Root cause → Impact → Fix → Timeline → References
-  Engineer yang menilai kamu paling memperhatikan Root cause dan Fix.
-
-  KEAMANAN ISI
-  - Temuan dari engagement klien: sanitasi total (domain, IP, nama, token, screenshot).
-    Kalau ragu, jangan publish. Pastikan diizinkan kontrak/NDA dan kantor.
-  - Disclosure publik: publish setelah vendor memperbaiki atau sesuai kebijakan disclosure.
-  - Kode di <pre>: karakter < > & harus ditulis &lt; &gt; &amp; supaya tampil sebagai teks.
--->
 
 <a class="skip" href="#main">Skip to content</a>
 
@@ -60,6 +37,7 @@
       <a href="../../projects/">Projects</a>
       <a href="../../videos/">Videos</a>
       <a href="../../#work">Work</a>
+      <button type="button" class="theme-toggle" id="theme" aria-label="Theme: system. Change theme" title="Theme: system">&#x25D0;&#xFE0E;</button>
     </nav>
   </div>
 </header>
@@ -74,7 +52,6 @@
       <ul class="byline">
         <li><time datetime="[YYYY-MM-DD]">[DD Mon YYYY]</time></li>
         <li>[N] min read</li>
-        <!-- Isi setelah di-import ke Medium. Hapus baris ini kalau tidak di-cross-post. -->
         <li><a href="https://medium.com/@[username]/[post-slug]">Also on Medium ↗</a></li>
       </ul>
       <ul class="tags" aria-label="Tags">
@@ -83,12 +60,10 @@
       </ul>
     </header>
 
-    <!-- Opsional: gambar sampul -->
     <figure class="article-cover">
       <div class="thumb"><img src="../../assets/thumbs/placeholder.svg" alt="[Cover image description]" width="1280" height="720"></div>
     </figure>
 
-    <!-- Ringkasan untuk pembaca yang cuma punya 30 detik -->
     <dl class="summary">
       <dt>Target</dt><dd>[Type of system, e.g. "Internal Active Directory, ~2,000 hosts" or "Payment callback API"]</dd>
       <dt>Bug class</dt><dd>[e.g. Broken access control (IDOR)]</dd>
@@ -176,8 +151,7 @@ func Callback(w http.ResponseWriter, r *http.Request) {
     <li><a href="../../#contact">Email</a></li>
   </ul>
   <div class="footer-meta">
-    <span>© 2026 Yafi Rasyad · <a href="https://yafirasyad.github.io/writing/">Mirror</a></span>
-    <button type="button" class="theme-toggle" id="theme" aria-label="Change theme">theme: system</button>
+    <span>© 2026 Yafi Rasyad</span>
   </div>
 </footer>
 </body>

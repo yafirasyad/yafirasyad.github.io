@@ -1,6 +1,5 @@
-# Laporkan masalah keamanan pada situs ini lewat kontak di bawah.
-# Perbarui "Expires" sebelum tanggal itu lewat (maksimal 1 tahun ke depan, RFC 9116).
+# Security contact for yafirasyad.github.io (RFC 9116).
 Contact: mailto:yafirasyadd@gmail.com
 Expires: 2027-10-24T00:00:00.000Z
 Preferred-Languages: en, id
-Canonical: https://[yourdomain].com/.well-known/security.txt
+Canonical: https://yafirasyad.github.io/.well-known/security.txt

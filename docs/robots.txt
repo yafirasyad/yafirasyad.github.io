@@ -1,4 +1,4 @@
 User-agent: *
-Disallow: /writing/post-template/
+Disallow:
 
-Sitemap: https://[yourdomain].com/sitemap.xml
+Sitemap: https://yafirasyad.github.io/sitemap.xml

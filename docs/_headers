@@ -1,21 +1,21 @@
-# Security headers untuk Cloudflare Pages (juga dibaca Netlify).
-# GitHub Pages mengabaikan file ini; itu normal untuk mirror.
+# Full security headers for hosts that read this file (Cloudflare Pages, Netlify).
+# GitHub Pages ignores it; there the CSP is set by a meta tag in every page. Keep both in sync.
 /*
-  Content-Security-Policy: default-src 'none'; script-src 'self'; style-src 'self'; font-src 'self'; img-src 'self' data:; base-uri 'none'; form-action 'none'; frame-ancestors 'none'; upgrade-insecure-requests
+  Content-Security-Policy: default-src 'none'; script-src 'self'; style-src 'self'; font-src 'self'; img-src 'self'; base-uri 'none'; form-action 'none'; frame-ancestors 'none'; require-trusted-types-for 'script'; trusted-types 'none'; upgrade-insecure-requests
   Strict-Transport-Security: max-age=31536000; includeSubDomains
   X-Content-Type-Options: nosniff
   X-Frame-Options: DENY
   Referrer-Policy: strict-origin-when-cross-origin
-  Permissions-Policy: accelerometer=(), camera=(), geolocation=(), gyroscope=(), magnetometer=(), microphone=(), payment=(), usb=()
+  Permissions-Policy: accelerometer=(), autoplay=(), browsing-topics=(), camera=(), display-capture=(), encrypted-media=(), fullscreen=(), geolocation=(), gyroscope=(), hid=(), idle-detection=(), magnetometer=(), microphone=(), midi=(), payment=(), picture-in-picture=(), publickey-credentials-get=(), screen-wake-lock=(), serial=(), usb=(), xr-spatial-tracking=()
   Cross-Origin-Opener-Policy: same-origin
   Cross-Origin-Resource-Policy: same-origin
+  X-Permitted-Cross-Domain-Policies: none
 
-# Jangan biarkan Google mengindeks template tulisan.
+# Keep the post template out of search results.
 /writing/post-template/*
   X-Robots-Tag: noindex
 
-# Jangan biarkan alamat *.pages.dev diindeks sebagai duplikat domain utama.
-# ":project" adalah placeholder Cloudflare yang cocok dengan nama project apa pun; biarkan apa adanya.
+# Keep *.pages.dev out of search results as a duplicate.
 https://:project.pages.dev/*
   X-Robots-Tag: noindex
 

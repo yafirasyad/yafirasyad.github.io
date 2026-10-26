@@ -3,20 +3,17 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <!-- CSP juga di sini supaya mirror GitHub Pages (yang tidak membaca _headers) tetap terlindungi.
-       Header di _headers tetap yang utama di Cloudflare; frame-ancestors hanya berlaku lewat header. -->
-  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; font-src 'self'; img-src 'self' data:; base-uri 'none'; form-action 'none'; upgrade-insecure-requests">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; font-src 'self'; img-src 'self'; base-uri 'none'; form-action 'none'; require-trusted-types-for 'script'; trusted-types 'none'; upgrade-insecure-requests">
   <meta name="referrer" content="strict-origin-when-cross-origin">
-  <title>Writing · Yafi Rasyad</title>
-  <meta name="description" content="Writeups, research and notes by Yafi Rasyad.">
-  <link rel="canonical" href="https://[yourdomain].com/writing/">
+  <title>Writing &amp; research · Yafi Rasyad</title>
+  <meta name="description" content="Articles and research by Yafi Rasyad.">
+  <link rel="canonical" href="https://yafirasyad.github.io/writing/">
   <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
   <link rel="icon" href="../assets/favicon-32.png" sizes="32x32" type="image/png">
   <link rel="apple-touch-icon" href="../assets/apple-touch-icon.png">
   <meta name="theme-color" content="#f2f4f3" media="(prefers-color-scheme: light)">
   <meta name="theme-color" content="#121514" media="(prefers-color-scheme: dark)">
-  <!-- Gambar preview saat link dibagikan (LinkedIn, X, WhatsApp). Harus URL absolut. -->
-  <meta property="og:image" content="https://[yourdomain].com/assets/og.png">
+  <meta property="og:image" content="https://yafirasyad.github.io/assets/og.png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta name="twitter:card" content="summary_large_image">
@@ -24,16 +21,6 @@
   <script src="../assets/main.js"></script>
 </head>
 <body>
-<!--
-  SEMUA TULISAN
-  - Dikelompokkan per tahun, terbaru di atas. Update angka di <span class="count">.
-  - Setiap tulisan: link ke "<slug>/" (folder di dalam writing/). Halaman itu yang utama.
-  - Kalau sudah di-cross-post ke Medium: tambahkan "also on Medium" di meta.
-    Link Medium-nya ada di dalam halaman tulisan, bukan di kartu.
-  - Paper/jurnal tanpa halaman sendiri: link ke URL aslinya, tambahkan " ↗".
-  - Tag di meta menggantikan halaman Categories. Pakai 3-5 tag yang konsisten
-    (misalnya: web, active-directory, ai-security, ctf, paper).
--->
 
 <a class="skip" href="#main">Skip to content</a>
 
@@ -45,6 +32,7 @@
       <a href="../projects/">Projects</a>
       <a href="../videos/">Videos</a>
       <a href="../#work">Work</a>
+      <button type="button" class="theme-toggle" id="theme" aria-label="Theme: system. Change theme" title="Theme: system">&#x25D0;&#xFE0E;</button>
     </nav>
   </div>
 </header>
@@ -52,17 +40,16 @@
 <main id="main" class="wrap">
   <div class="page-head">
     <a class="back" href="../">← Home</a>
-    <h1>Writing</h1>
-    <p>Writeups on web, API and Active Directory security, plus research on digital forensics. Posts are also published on <a href="https://medium.com/@[username]">Medium</a>.</p>
+    <h1>Writing &amp; research</h1>
+    <p>Articles on web, API and Active Directory security, also published on <a href="https://medium.com/@[username]">Medium</a>, plus research on digital forensics.</p>
   </div>
 
   <div class="groups">
 
-    <section class="group" aria-labelledby="y-2026">
-      <h2 class="group-title" id="y-2026"><span>2026</span><span class="count">[1] post</span></h2>
+    <section class="group" aria-labelledby="articles">
+      <h2 class="group-title" id="articles"><span>Articles</span><span class="count">[1] article</span></h2>
       <ul class="posts">
         <li>
-          <!-- Contoh. Ganti dengan writeup pertamamu, lalu hapus "Example:". -->
           <a class="post" href="post-template/">
             <div class="thumb"><img src="../assets/thumbs/placeholder.svg" alt="[Short description of the image]" width="1280" height="800"></div>
             <div class="body">
@@ -75,24 +62,18 @@
       </ul>
     </section>
 
-    <section class="group" aria-labelledby="y-2023">
-      <h2 class="group-title" id="y-2023"><span>2023</span><span class="count">1 thesis</span></h2>
+    <section class="group" aria-labelledby="research">
+      <h2 class="group-title" id="research"><span>Research</span><span class="count">2</span></h2>
       <ul class="posts">
         <li>
           <a class="post no-thumb" href="https://etd.repository.ugm.ac.id/penelitian/detail/225634">
             <div class="body">
               <span class="title">Development of Bash Scripting-Based Forensic Tools for Investigating XSS and DDoS Attack Logs on Websites</span>
-              <span class="desc">Undergraduate thesis, Universitas Gadjah Mada (ETD Repository). With Ir. Sujoko Sumaryono, M.T. and Dani Adhipta, S.Si., M.T. Code on <a href="https://github.com/yafirasyad/forenlog">GitHub</a>.</span>
+              <span class="desc">Undergraduate thesis, Universitas Gadjah Mada (ETD Repository). With Ir. Sujoko Sumaryono, M.T. and Dani Adhipta, S.Si., M.T. The tool is Forenlog, in Projects.</span>
               <span class="meta">2023-07 · thesis · forensics ↗</span>
             </div>
           </a>
         </li>
-      </ul>
-    </section>
-
-    <section class="group" aria-labelledby="y-2022">
-      <h2 class="group-title" id="y-2022"><span>2022</span><span class="count">1 paper</span></h2>
-      <ul class="posts">
         <li>
           <a class="post no-thumb" href="https://ejournal.uin-suka.ac.id/saintek/cybersecurity/article/view/3935">
             <div class="body">
@@ -118,8 +99,7 @@
     <li><a href="../#contact">Email</a></li>
   </ul>
   <div class="footer-meta">
-    <span>© 2026 Yafi Rasyad · <a href="https://yafirasyad.github.io/writing/">Mirror</a></span>
-    <button type="button" class="theme-toggle" id="theme" aria-label="Change theme">theme: system</button>
+    <span>© 2026 Yafi Rasyad</span>
   </div>
 </footer>
 </body>

@@ -3,20 +3,17 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <!-- CSP juga di sini supaya mirror GitHub Pages (yang tidak membaca _headers) tetap terlindungi.
-       Header di _headers tetap yang utama di Cloudflare; frame-ancestors hanya berlaku lewat header. -->
-  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; font-src 'self'; img-src 'self' data:; base-uri 'none'; form-action 'none'; upgrade-insecure-requests">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; font-src 'self'; img-src 'self'; base-uri 'none'; form-action 'none'; require-trusted-types-for 'script'; trusted-types 'none'; upgrade-insecure-requests">
   <meta name="referrer" content="strict-origin-when-cross-origin">
   <title>Videos · Yafi Rasyad</title>
   <meta name="description" content="Videos and talks by Yafi Rasyad.">
-  <link rel="canonical" href="https://[yourdomain].com/videos/">
+  <link rel="canonical" href="https://yafirasyad.github.io/videos/">
   <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
   <link rel="icon" href="../assets/favicon-32.png" sizes="32x32" type="image/png">
   <link rel="apple-touch-icon" href="../assets/apple-touch-icon.png">
   <meta name="theme-color" content="#f2f4f3" media="(prefers-color-scheme: light)">
   <meta name="theme-color" content="#121514" media="(prefers-color-scheme: dark)">
-  <!-- Gambar preview saat link dibagikan (LinkedIn, X, WhatsApp). Harus URL absolut. -->
-  <meta property="og:image" content="https://[yourdomain].com/assets/og.png">
+  <meta property="og:image" content="https://yafirasyad.github.io/assets/og.png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta name="twitter:card" content="summary_large_image">
@@ -24,15 +21,6 @@
   <script src="../assets/main.js"></script>
 </head>
 <body>
-<!--
-  SEMUA VIDEO & TALK
-  - Dikelompokkan per topik (seperti LiveOverflow), bukan per tanggal, supaya orang
-    langsung ke topik yang mereka cari. Talk masuk grup sendiri.
-  - Hanya konten teknis. Channel vlog/personal tetap di footer homepage.
-  - Link biasa ke YouTube, bukan embed <iframe> (embed menambah tracking
-    pihak ketiga dan harus melonggarkan CSP).
-  - Thumbnail: simpan di assets/thumbs/ (lihat README bagian Thumbnail).
--->
 
 <a class="skip" href="#main">Skip to content</a>
 
@@ -44,6 +32,7 @@
       <a href="../projects/">Projects</a>
       <a href="../videos/" aria-current="page">Videos</a>
       <a href="../#work">Work</a>
+      <button type="button" class="theme-toggle" id="theme" aria-label="Theme: system. Change theme" title="Theme: system">&#x25D0;&#xFE0E;</button>
     </nav>
   </div>
 </header>
@@ -140,8 +129,7 @@
     <li><a href="../#contact">Email</a></li>
   </ul>
   <div class="footer-meta">
-    <span>© 2026 Yafi Rasyad · <a href="https://yafirasyad.github.io/videos/">Mirror</a></span>
-    <button type="button" class="theme-toggle" id="theme" aria-label="Change theme">theme: system</button>
+    <span>© 2026 Yafi Rasyad</span>
   </div>
 </footer>
 </body>

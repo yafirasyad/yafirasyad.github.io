@@ -3,18 +3,16 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <!-- CSP juga di sini supaya mirror GitHub Pages (yang tidak membaca _headers) tetap terlindungi.
-       Header di _headers tetap yang utama di Cloudflare; frame-ancestors hanya berlaku lewat header. -->
-  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; font-src 'self'; img-src 'self' data:; base-uri 'none'; form-action 'none'; upgrade-insecure-requests">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; font-src 'self'; img-src 'self'; base-uri 'none'; form-action 'none'; require-trusted-types-for 'script'; trusted-types 'none'; upgrade-insecure-requests">
   <meta name="referrer" content="strict-origin-when-cross-origin">
   <title>Yafi Rasyad</title>
   <meta name="description" content="Yafi Rasyad, offensive security consultant at ITSEC Asia. Web, API and infrastructure security testing for companies in Indonesia.">
-  <link rel="canonical" href="https://[yourdomain].com/">
+  <link rel="canonical" href="https://yafirasyad.github.io/">
 
   <meta property="og:type" content="website">
   <meta property="og:title" content="Yafi Rasyad">
   <meta property="og:description" content="Offensive security consultant at ITSEC Asia. Web, API and infrastructure security testing.">
-  <meta property="og:url" content="https://[yourdomain].com/">
+  <meta property="og:url" content="https://yafirasyad.github.io/">
 
   <link rel="preload" href="assets/fonts/instrument-sans-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
@@ -22,8 +20,7 @@
   <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
   <meta name="theme-color" content="#f2f4f3" media="(prefers-color-scheme: light)">
   <meta name="theme-color" content="#121514" media="(prefers-color-scheme: dark)">
-  <!-- Gambar preview saat link dibagikan (LinkedIn, X, WhatsApp). Harus URL absolut. -->
-  <meta property="og:image" content="https://[yourdomain].com/assets/og.png">
+  <meta property="og:image" content="https://yafirasyad.github.io/assets/og.png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta name="twitter:card" content="summary_large_image">
@@ -31,27 +28,6 @@
   <script src="assets/main.js"></script>
 </head>
 <body>
-<!--
-  CARA ISI
-  - Teks dalam [kurung siku] = belum ada datanya. Isi, atau hapus barisnya.
-  - Entri yang diawali "Example:" = contoh bentuk, bukan data nyata. Ganti atau hapus sebelum publish.
-  - Section yang belum punya isi: hapus <section>-nya DAN item menunya.
-  - Satu entri = satu <li>. Entri terbaik/terbaru paling atas.
-
-  THUMBNAIL
-  - Simpan gambar di assets/thumbs/, lalu ganti src="assets/thumbs/placeholder.svg".
-  - 1280x720 (16:9), .jpg/.webp, di bawah ~150 KB. Strip EXIF dulu. Isi alt="".
-
-  HALAMAN
-  - /            ← halaman ini: ringkasan terbaik
-  - /writing/    ← semua tulisan, per tahun        - /writing/<slug>/ ← satu tulisan
-  - /projects/   ← semua proyek                    - /videos/         ← semua video
-  - /404.html
-
-  URUTAN (dari yang paling bikin orang terkesan)
-  1. Intro + baris bukti   2. Writing & research   3. Projects   4. Videos & talks
-  5. Work                  6. Certifications & awards   -  Off the clock   7. Get in touch
--->
 
 <a class="skip" href="#main">Skip to content</a>
 
@@ -63,36 +39,24 @@
       <a href="projects/">Projects</a>
       <a href="videos/">Videos</a>
       <a href="#work">Work</a>
+      <button type="button" class="theme-toggle" id="theme" aria-label="Theme: system. Change theme" title="Theme: system">&#x25D0;&#xFE0E;</button>
     </nav>
   </div>
 </header>
 
 <main id="main" class="wrap">
 
-  <!-- 1. INTRO -->
   <section class="intro" aria-label="Introduction">
     <div class="intro-top">
-      <!-- AVATAR (opsional): foto kecil dan santai, 1:1, minimal 160x160px.
-           Simpan sebagai assets/avatar.jpg (strip EXIF dulu), lalu ganti src.
-           Tidak mau pakai foto? Hapus <img> ini. -->
       <img class="avatar" src="assets/avatar.jpg" alt="Yafi Rasyad" width="80" height="80">
-      <p class="lede">I'm Yafi, an offensive security consultant at ITSEC Asia. <span class="quiet">I test web apps, APIs and internal networks.</span></p>
+      <p class="lede">I'm Yafi, an offensive security consultant at ITSEC Asia. <span class="quiet">I find security flaws in web apps, APIs and internal networks for banks, telcos, insurers and universities.</span></p>
     </div>
-    <p>I also build software, front end to back end: Go services, Laravel and Next.js web apps, and an IoT monitoring system for a reservoir. Some of it is in <a href="projects/">projects</a>.</p>
-    <!-- BARIS BUKTI (sementara disembunyikan): tambahkan lagi kalau sudah ada fakta yang benar-benar kuat,
-         misalnya CVE, bug bounty, hasil CTF internasional, atau jumlah engagement. Maksimal 3.
-    <ul class="facts" aria-label="Highlights">
-      <li>[fact one]</li>
-      <li>[fact two]</li>
-      <li>[fact three]</li>
-    </ul>
-    -->
+    <p>I'm now going deeper into software engineering, security engineering and AI, and I <a href="writing/">write</a> and <a href="videos/">make videos</a> about what I learn.</p>
     <ul class="links">
       <li><a href="https://github.com/yafirasyad">GitHub</a></li>
       <li><a href="https://www.linkedin.com/in/yafirasyad">LinkedIn</a></li>
       <li><a href="https://medium.com/@[username]">Medium</a></li>
       <li>
-        <!-- YouTube: dua channel. Tech = konten profesional, non-tech = personal. -->
         <details class="dropdown">
           <summary>YouTube</summary>
           <ul class="dropdown-panel">
@@ -106,17 +70,16 @@
     </ul>
   </section>
 
-  <!-- 2. WRITING & RESEARCH
-       Tulisan di situs sendiri (writing/<slug>/) + cross-post ke Medium ("also on Medium").
-       Paper tanpa halaman sendiri: link ke URL aslinya, tambahkan " ↗". -->
   <section class="section" aria-labelledby="writing">
     <div class="section-head">
       <h2 id="writing">Writing &amp; research</h2>
-      <a class="see-all" href="writing/">All posts →</a>
+      <a class="see-all" href="writing/">All writing →</a>
     </div>
+    <div class="groups compact">
+    <div class="group">
+    <h3 class="group-title"><a href="writing/#articles">Articles</a></h3>
     <ul class="posts">
       <li>
-        <!-- Contoh writeup. Ganti dengan writeup pertamamu (HTB, CTF, atau temuan yang sudah disanitasi). -->
         <a class="post" href="writing/post-template/">
           <div class="thumb"><img src="assets/thumbs/placeholder.svg" alt="[Short description of the image]" width="1280" height="800"></div>
           <div class="body">
@@ -126,6 +89,11 @@
           </div>
         </a>
       </li>
+    </ul>
+    </div>
+    <div class="group">
+    <h3 class="group-title"><a href="writing/#research">Research</a></h3>
+    <ul class="posts">
       <li>
         <a class="post no-thumb" href="https://etd.repository.ugm.ac.id/penelitian/detail/225634">
           <div class="body">
@@ -145,9 +113,10 @@
         </a>
       </li>
     </ul>
+    </div>
+    </div>
   </section>
 
-  <!-- 3. PROJECTS -->
   <section class="section" aria-labelledby="projects">
     <div class="section-head">
       <h2 id="projects">Projects</h2>
@@ -177,7 +146,6 @@
     </ul>
   </section>
 
-  <!-- 4. VIDEOS & TALKS (tech saja). Kurasi 2-6 video terbaik. -->
   <section class="section" aria-labelledby="videos">
     <div class="section-head">
       <h2 id="videos">Videos &amp; talks <span class="chip tech">tech</span></h2>
@@ -198,7 +166,6 @@
         </a>
       </li>
       <li>
-        <!-- Tutorial Camp404 (sumber: CV). Ganti link dengan playlist/video aslinya. -->
         <a class="tile" href="https://www.youtube.com/live/qsUsNvlckz4">
           <div class="thumb">
             <img src="assets/thumbs/placeholder.svg" alt="[Still from the Camp404 web development tutorial]" width="1280" height="720" loading="lazy">
@@ -214,9 +181,6 @@
     </ul>
   </section>
 
-  <!-- 5. WORK (pekerjaan dan intern saja, terbaru di atas)
-       Bullet = hasil + angka (formula XYZ). Angka dalam [kurung] = contoh: ganti dengan angka asli
-       yang bisa kamu pertanggungjawabkan di interview, atau hapus klausanya. Samakan dengan CV dan LinkedIn. -->
   <section class="section" aria-labelledby="work">
     <div class="section-head">
       <h2 id="work">Work</h2>
@@ -268,7 +232,6 @@
     </ul>
   </section>
 
-  <!-- 5b. EDUCATION & COMMUNITY (terbaru di atas, urut tahun selesai) -->
   <section class="section" aria-labelledby="education">
     <div class="section-head">
       <h2 id="education">Education &amp; community</h2>
@@ -291,25 +254,18 @@
     </ul>
   </section>
 
-  <!-- 6. AWARDS (+ sertifikasi nanti)
-       Setelah lulus OSCP (atau sertifikasi lain), tambahkan barisnya di sini dan ganti judul
-       section jadi "Certifications &amp; awards". Contoh:
-       <li><span class="when">2026</span><span>OSCP <span class="note">· OffSec</span></span></li> -->
   <section class="section" aria-labelledby="certs">
     <div class="section-head">
       <h2 id="certs">Awards</h2>
     </div>
     <ul class="rows">
-      <li><span class="when">2021</span><span>1st place, KMTETI CTF</span></li>
-      <li><span class="when">2020</span><span>Finalist, ELCCO Technology Creation Contest</span></li>
-      <li><span class="when">2017</span><span>3rd place, Science and Technology Award <span class="note">· Mayor of Yogyakarta</span></span></li>
-      <li><span class="when">2017</span><span>1st place, Science Expo Padmanaba</span></li>
+      <li><span class="when">2021</span><span><a href="awards/kmteti-ctf-2021/">1st place, KMTETI CTF</a></span></li>
+      <li><span class="when">2020</span><span><a href="awards/elcco-2020/">Finalist, ELCCO Technology Creation Contest</a></span></li>
+      <li><span class="when">2017</span><span><a href="awards/science-technology-award-2017/">3rd place, Science and Technology Award</a> <span class="note">· Mayor of Yogyakarta</span></span></li>
+      <li><span class="when">2017</span><span><a href="awards/science-expo-padmanaba-2017/">1st place, Science Expo Padmanaba</a></span></li>
     </ul>
   </section>
 
-  <!-- OFF THE CLOCK (non-tech). Kecil, di bawah, tidak masuk menu.
-       Pilih 3 video terbaik secara visual. Hindari "subscribe" atau angka subscriber.
-       Sebelum menautkan: tonton ulang channel-nya dengan mata recruiter. -->
   <section class="section offclock" aria-labelledby="offclock">
     <div class="section-head">
       <h2 id="offclock">Off the clock <span class="chip life">non-tech</span></h2>
@@ -338,7 +294,6 @@
     </ul>
   </section>
 
-  <!-- 7. CONNECT -->
   <section class="section connect" aria-labelledby="contact-h" id="contact">
     <div class="section-head">
       <h2 id="contact-h">Get in touch</h2>
@@ -362,8 +317,7 @@
     <li><a href="#contact">Email</a></li>
   </ul>
   <div class="footer-meta">
-    <span>© 2026 Yafi Rasyad · <a href="https://yafirasyad.github.io/">Mirror</a></span>
-    <button type="button" class="theme-toggle" id="theme" aria-label="Change theme">theme: system</button>
+    <span>© 2026 Yafi Rasyad</span>
   </div>
 </footer>
 </body>

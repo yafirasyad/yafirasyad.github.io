@@ -1,8 +1,11 @@
 # Personal site: rules for Claude
 
 Static multi-page personal site for Yafi Rasyad. Plain HTML, CSS and one small JS file.
-No framework, no build step, no package.json. Only `docs/` is published
-(Cloudflare Pages as primary, GitHub Pages as mirror). See README.md for deploy steps.
+No framework, no build step, no package.json. Only `docs/` is published, on GitHub Pages at
+`https://yafirasyad.github.io` (primary and canonical). Cloudflare Pages with a custom domain is optional
+and only adds the headers in `docs/_headers`. Deploy steps and the owner's checklist are in
+`private/GUIDE.md` (local only, gitignored). `README.md` is public: keep it short, in English, and free of
+internal notes or placeholders.
 
 ## Hard rules (security)
 
@@ -16,6 +19,11 @@ No framework, no build step, no package.json. Only `docs/` is published
 - **Never read the URL into the page** (`location`, query string, hash) and write it into the DOM.
   `404.html` must keep not echoing the requested path.
 - Keep `404.html` on absolute paths (`/assets/...`). All other pages use relative paths.
+- **No notes in published files.** Everything in `docs/` is public, including HTML comments (View Source).
+  Do not add HTML comments to `docs/`. Owner notes and how-tos go in `private/GUIDE.md`; short code
+  comments in `main.js`, `style.css` and `_headers` are fine, in English.
+- `docs/assets/main.js` stays ASCII-only (write non-ASCII as `\uXXXX`) and must not use `innerHTML`,
+  `eval` or other Trusted Types sinks; the CSP enforces Trusted Types and they would break silently.
 - Do not commit secrets, `.env` files, client data, or images with EXIF metadata.
 
 ## Structure and conventions
@@ -23,7 +31,9 @@ No framework, no build step, no package.json. Only `docs/` is published
 - Header, footer and `<head>` are repeated in every HTML file. When changing the menu, social links,
   favicon or CSP, change ALL of: `docs/index.html`, `docs/writing/index.html`,
   `docs/writing/post-template/index.html`, `docs/projects/index.html`, `docs/videos/index.html`,
-  `docs/404.html`, and every `docs/writing/<slug>/index.html`.
+  `docs/404.html`, every `docs/writing/<slug>/index.html`, and every `docs/awards/<slug>/index.html`.
+- Each award on the homepage links to its own page in `docs/awards/<slug>/`. Pages keep `noindex` until
+  their placeholders are filled; then remove it and add a `<url>` to `docs/sitemap.xml`.
 - Colours and fonts come only from the CSS tokens at the top of `style.css`. Keep light and dark themes working.
 - New writeup: copy `docs/writing/post-template/` to `docs/writing/<slug>/`, remove its `noindex` meta,
   add an entry to `docs/writing/index.html`, and add a `<url>` to `docs/sitemap.xml`.
