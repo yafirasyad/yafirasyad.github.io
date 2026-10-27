@@ -132,6 +132,9 @@ a:hover .thumb img { transform: scale(1.03); }
 .tile:hover .title { color: var(--accent); }
 .tile .desc { color: var(--muted); font-size: 15px; }
 .tile .meta { font: 12px var(--font-mono); color: var(--muted); }
+/* Tile without a thumbnail: a bordered card. */
+.tile.no-thumb { align-content: start; padding: 16px 18px; border: 1px solid var(--line); border-radius: 8px; transition: border-color .2s ease; }
+.tile.no-thumb:hover { border-color: var(--muted); }
 
 /* Work */
 .jobs { list-style: none; margin: 0; padding: 0; display: grid; gap: 18px; }
