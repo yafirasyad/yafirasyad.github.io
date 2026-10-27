@@ -16,6 +16,7 @@ docs/                  served by GitHub Pages
 ├── 404.html
 └── assets/            CSS, JS, self-hosted fonts and images
 resume/                source of docs/assets/resume.pdf
+tools/serve.py         local server that behaves like GitHub Pages
 ```
 
 ## Security
@@ -32,9 +33,22 @@ Found a security issue? See [`/.well-known/security.txt`](https://yafirasyad.git
 ## Run locally
 
 ```bash
-cd docs
-python3 -m http.server 8000
+python tools/serve.py
 ```
+
+Then open http://127.0.0.1:8000. Like GitHub Pages, it shows no directory listings and serves
+`404.html` for missing paths. It also disables caching and only listens on 127.0.0.1.
+
+## Rebuild the résumé
+
+Edit `resume/resume.html`, then print it to PDF with headless Chrome (A4, one page):
+
+```bash
+chrome --headless=new --no-pdf-header-footer \
+  --print-to-pdf=docs/assets/resume.pdf resume/resume.html
+```
+
+Or run `python3 resume/build.py` (needs Playwright).
 
 ## Fonts
 

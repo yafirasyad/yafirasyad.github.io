@@ -3,16 +3,7 @@
 <head>
 <meta charset="utf-8">
 <title>Grinaldy Yafi' Rasyad — Résumé</title>
-<!--
-  SUMBER RÉSUMÉ. Edit file ini, lalu buat ulang PDF-nya:
-    - Cara cepat: buka file ini di Chrome → Print → Destination "Save as PDF",
-      Paper A4, Margins "Default", centang "Background graphics" (tidak wajib).
-      Simpan sebagai docs/assets/resume.pdf
-    - Atau: python3 resume/build.py  (butuh playwright)
-  Aturan: satu halaman, satu kolom, teks asli (bukan gambar) supaya terbaca ATS.
-  Angka hanya yang asli dan bisa kamu jelaskan di interview.
-  Tidak ada nomor HP / alamat rumah di versi publik.
--->
+<!-- Source of docs/assets/resume.pdf. Rebuild after editing: see README. One page, single column, real text. -->
 <style>
 @font-face { font-family: "Instrument Sans"; font-weight: 400; src: url("../docs/assets/fonts/instrument-sans-latin-400-normal.woff2") format("woff2"); }
 @font-face { font-family: "Instrument Sans"; font-weight: 500; src: url("../docs/assets/fonts/instrument-sans-latin-500-normal.woff2") format("woff2"); }
@@ -59,8 +50,7 @@ li::marker { color: var(--muted); }
   </div>
   <div class="contact">
     <a href="mailto:yafirasyadd@gmail.com">yafirasyadd@gmail.com</a><br>
-    <!-- Ganti dengan domain baru setelah live -->
-    <a href="https://yafirasyad.netlify.app/">yafirasyad.netlify.app</a><br>
+    <a href="https://yafirasyad.github.io/">yafirasyad.github.io</a><br>
     <a href="https://www.linkedin.com/in/yafirasyad/">linkedin.com/in/yafirasyad</a> · <a href="https://github.com/yafirasyad">github.com/yafirasyad</a>
   </div>
 </header>
@@ -69,27 +59,26 @@ li::marker { color: var(--muted); }
 
 <div class="item">
   <div class="row"><span><span class="org">ITSEC Asia</span> · <span class="role">Jr. Offensive Security Consultant</span></span><span class="when">Oct 2023 – Present</span></div>
-  <div class="row"><span class="muted">Previously Offensive Security Consultant Intern, Feb – Aug 2023</span><span class="where">Jakarta, Indonesia</span></div>
+  <div class="row"><span class="muted">Offensive Security Consultant Intern, Feb – Aug 2023</span><span class="where">Jakarta, Indonesia</span></div>
   <ul>
-    <!-- Tambahkan angka asli di bullet pertama: jumlah engagement dan temuan high/critical. -->
-    <li>Lead web application, API, infrastructure and Active Directory penetration tests and retests for telecom, banking, health insurance and education companies, across white-, grey- and black-box engagements.</li>
-    <li>Write English technical reports and walk client stakeholders and engineers through risk and remediation.</li>
-    <li>Run several client engagements in parallel while meeting each report deadline.</li>
+    <li>Perform web application, API and infrastructure penetration tests and retests for banks, telcos, health insurers and universities in Indonesia, across white-, grey- and black-box engagements.</li>
+    <li>Write English technical reports and walk client engineers and stakeholders through each risk and fix.</li>
+    <li>Retest reported issues after remediation and confirm the fixes with client teams.</li>
   </ul>
 </div>
 
 <div class="item">
   <div class="row"><span><span class="org">Synapsis.id</span> · <span class="role">Backend Developer Intern</span></span><span class="when">Nov 2022 – Feb 2023</span></div>
   <ul>
-    <li>Built backend services in Go and MySQL, containerized with Docker, for a production-efficiency system for a coal mining client in Kalimantan.</li>
-    <li>Built the company portfolio site in Next.js.</li>
+    <li>Built backend services in Go and MySQL, containerized with Docker, for a production-efficiency system used by a coal mining client in Kalimantan.</li>
+    <li>Helped the client map its digital-transformation requirements, and built the company's portfolio site in Next.js.</li>
   </ul>
 </div>
 
 <div class="item">
   <div class="row"><span><span class="org">Camp404</span> · <span class="role">Fullstack Web Developer Intern</span></span><span class="when">Jan – Mar 2022</span></div>
   <ul>
-    <li>Built a Laravel and MySQL CRUD app and sped up its search page by querying results on demand instead of loading the full table.</li>
+    <li>Built a Laravel/MySQL CRUD app; sped up search by querying on demand instead of loading the full table.</li>
     <li>Taught HTML, CSS, PHP and SQL to 1,514 participants over Zoom and <a href="https://www.youtube.com/live/qsUsNvlckz4">YouTube</a>.</li>
   </ul>
 </div>
@@ -97,48 +86,53 @@ li::marker { color: var(--muted); }
 <div class="item">
   <div class="row"><span><span class="org">Widya Security</span> · <span class="role">Cybersecurity Engineer Intern</span></span><span class="when">Aug – Dec 2021</span></div>
   <ul>
-    <li>Tested web applications using OWASP and ISSAF methodology, including application-layer DoS resilience testing.</li>
-    <li>Researched forensic acquisition of encrypted chat traffic; the work became a published journal paper.</li>
+    <li>Tested web apps with OWASP and ISSAF; an authorized slowloris DoS test kept the target down 16+ minutes.</li>
+    <li>Captured encrypted chat traffic via man-in-the-middle for live forensics; published the paper as first author.</li>
   </ul>
 </div>
 
 <h2>Projects &amp; Publications</h2>
 
 <div class="item">
-  <div class="row"><span><a class="org" href="https://github.com/yafirasyad/forenlog">Forenlog</a> · Bash, undergraduate thesis</span><span class="when">2023</span></div>
-  <p class="plain">Forensic tool for investigating XSS and DDoS attacks in web server logs. Published in the <a href="https://etd.repository.ugm.ac.id/penelitian/detail/225634">UGM ETD Repository</a>.</p>
-</div>
-<div class="item">
-  <div class="row"><span><span class="org">Waduk Bendo IoT monitoring</span> · PHP, ThingSpeak API</span><span class="when">2022</span></div>
-  <p class="plain">Real-time monitoring software for the Bendo reservoir, built for Yiqun Technology (Taiwan) and PLN.</p>
-</div>
-<div class="item">
-  <div class="row"><span><a class="org" href="https://nu-piyungan.com/">Nu-piyungan.com survey app</a> · Laravel, JavaScript</span><span class="when">2021</span></div>
-  <p class="plain">Survey and data collection web app for the Nahdlatul Ulama community in Piyungan; front-end development.</p>
+  <div class="row"><span><a class="org" href="https://github.com/yafirasyad/forenlog">Forenlog</a> · Bash · undergraduate thesis</span><span class="when">2023</span></div>
+  <p class="plain">Forensic tool that finds XSS and DDoS traces in web server logs. Published in the <a href="https://etd.repository.ugm.ac.id/penelitian/detail/225634">UGM ETD Repository</a>.</p>
 </div>
 <div class="item">
   <div class="row"><span class="org"><a href="https://ejournal.uin-suka.ac.id/saintek/cybersecurity/article/view/3935">Analysis of Encrypted Network Traffic from a Secure Instant Messaging Application: A Case Study on Synology Chat</a></span><span class="when">2022</span></div>
   <p class="plain muted">G. Y. Rasyad, D. Hariyadi, T. Febrianto. Jurnal Cybersecurity dan Forensik Digital, Vol. 5 No. 2.</p>
 </div>
+<div class="item">
+  <div class="row"><span><span class="org">Waduk Bendo IoT monitoring</span> · PHP, ThingSpeak API</span><span class="when">2022</span></div>
+  <p class="plain">Real-time monitoring software for the Bendo reservoir, built for Yiqun Technology (Taiwan) and PLN.</p>
+</div>
+
+<h2>Certifications &amp; Training</h2>
+<p class="plain">HTB Academy job-role paths completed: CPTS, CBBH, CWEE (web exploitation, Active Directory, pentest methodology). Preparing for OSCP and OSWE.</p>
 
 <h2>Education</h2>
 <div class="item">
   <div class="row"><span><span class="org">Universitas Gadjah Mada</span> · B.Eng. Information Engineering</span><span class="when">Aug 2019 – Jul 2023</span></div>
   <ul>
-    <li>Teaching assistant for Computer Security, IT Auditing and Risk Management, and Data Compression; lab assistant for Basic Programming and OOP.</li>
-    <li>Software Developer Lead, Technocorner tech event (2020–2021) · Vice President, Night Login Linux and networking community (2020–2021).</li>
+    <li>Teaching assistant for Computer Security, IT Auditing and Risk Management, and Data Compression; lab assistant for Basic Programming, Object-Oriented Programming and IT Senior Project.</li>
+    <li>Coursework: Software Engineering, Artificial Intelligence, Cloud Computing, Ethical Hacking, Digital Forensics.</li>
   </ul>
 </div>
 
+<h2>Leadership</h2>
+<ul>
+  <li>Unit Coordinator, KKN-PPM UGM community service program (2023).</li>
+  <li>Software Developer Lead, Technocorner tech event (2020–2021) · Vice President, Night Login Linux and networking community (2020–2021) · Front-end co-mentor, Ylabs (2021).</li>
+</ul>
+
 <h2>Awards</h2>
-<p class="plain">1st place, KMTETI CTF (2021) · Finalist, ELCCO Technology Creation Contest (2020) · 3rd place, Science and Technology Award, Mayor of Yogyakarta (2017) · 1st place, Science Expo Padmanaba (2017)</p>
+<p class="plain">1st place, KMTETI CTF (2021) · Finalist, ELCCO Technology Creation Contest (2020)</p>
 
 <h2>Skills</h2>
 <dl class="skills">
-  <dt>Security</dt><dd>Web and API penetration testing, Active Directory, OWASP, ISSAF, digital forensics</dd>
-  <dt>Languages</dt><dd>Go, Python, PHP, JavaScript, Bash, SQL, Java</dd>
+  <dt>Security</dt><dd>Web and API penetration testing, infrastructure testing, OWASP, ISSAF, digital forensics</dd>
+  <dt>Languages</dt><dd>Python, Go, JavaScript, PHP, Bash, SQL, Java</dd>
   <dt>Tools</dt><dd>Docker, Git, MySQL, Laravel, Next.js</dd>
-  <dt>Spoken</dt><dd>Indonesian (native), Javanese (native), English (professional)</dd>
+  <dt>Spoken</dt><dd>Indonesian, Javanese, English</dd>
 </dl>
 
 </div>

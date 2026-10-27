@@ -25,13 +25,16 @@ internal notes or placeholders.
 - `docs/assets/main.js` stays ASCII-only (write non-ASCII as `\uXXXX`) and must not use `innerHTML`,
   `eval` or other Trusted Types sinks; the CSP enforces Trusted Types and they would break silently.
 - Do not commit secrets, `.env` files, client data, or images with EXIF metadata.
+- SVG files opened directly are documents without the meta CSP. Only commit SVGs you made or checked:
+  no `<script>`, no `on*=` attributes, no `<foreignObject>`, no external `href`. Prefer PNG/JPG/WebP for
+  images from elsewhere. Same care for PDFs: no JavaScript or embedded files.
 
 ## Structure and conventions
 
 - Header, footer and `<head>` are repeated in every HTML file. When changing the menu, social links,
   favicon or CSP, change ALL of: `docs/index.html`, `docs/writing/index.html`,
   `docs/writing/post-template/index.html`, `docs/projects/index.html`, `docs/videos/index.html`,
-  `docs/404.html`, every `docs/writing/<slug>/index.html`, and every `docs/awards/<slug>/index.html`.
+  `docs/404.html`, every `docs/writing/<slug>/index.html`, `docs/awards/index.html`, and every `docs/awards/<slug>/index.html`.
 - Each award on the homepage links to its own page in `docs/awards/<slug>/`. Pages keep `noindex` until
   their placeholders are filled; then remove it and add a `<url>` to `docs/sitemap.xml`.
 - Colours and fonts come only from the CSS tokens at the top of `style.css`. Keep light and dark themes working.
@@ -51,7 +54,7 @@ internal notes or placeholders.
 
 ## Before finishing a change
 
-1. Open `docs/` with `python3 -m http.server 8000` and check the page at desktop and ~375px width, light and dark.
+1. Run `python tools/serve.py` (serves `docs/` like GitHub Pages: no listings, real 404, no cache) and check the page at desktop and ~375px width, light and dark.
 2. Check the browser console has no CSP errors.
 3. Check every new link and `#anchor` points somewhere that exists.
 

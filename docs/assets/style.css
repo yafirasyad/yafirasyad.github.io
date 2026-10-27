@@ -94,6 +94,8 @@ main { padding-block: 72px 64px; display: grid; gap: 72px; }
 h2 { font-size: 17px; font-weight: 600; margin: 0; letter-spacing: -0.005em; }
 .see-all { font-size: 14px; color: var(--muted); text-decoration: none; }
 .see-all:hover { color: var(--accent); }
+/* Bigger tap area on small links without changing the layout. */
+.links a, .see-all, .footer-social a, .back, .article-nav a { padding-block: 4px; }
 
 /* Writing: rows with small thumbnail */
 .posts { list-style: none; margin: 0; padding: 0; display: grid; gap: 20px; }
